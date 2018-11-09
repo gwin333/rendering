@@ -1,8 +1,14 @@
+function createSingleNameTag() {
+    return `
+    <div class= "text-center mt-5" style= "width= 350px;
+    `
+}
+
 
 function renderNametags(nametags) {
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(nametags)}</code>
+            <div style= "
         </div>
     `
 }

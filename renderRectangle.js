@@ -17,6 +17,6 @@ function rectangle() {
         color: "#FF00FF"
     }
 
-    content.innerHTML = renderRectangle(rectangleAbstraction);
+    content.innerHTML = renderRectangle(rectangleAbstraction); //Call to Action
 
 }
