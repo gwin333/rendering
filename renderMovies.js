@@ -1,10 +1,21 @@
+function renderMovie(movies) {
+    return `
+    <div class="text-center mt-5" style = "display: flex; justify-content: space-around; border-radius: 15px; background: #e6e6e6; width: 725px; height: 460px; padding: 20px;">
+        <img src= '${movies.poster}'>
+        <span style = "background-color: #fff; border-radius: 15px; text-align: left; padding: 10px;">
+            <h2 style = "font-weight: bold;">${movies.title}</h2>
+            <p style = "font-weight: bold;">${movies.year}</p>
+            <h2>IMDB:</h2>
+            <h2>${movies.imdbRating}/10</h2>
+            <h2>Rotten Tomatoes:</h2>
+            <h2>${movies.rottenTomatoesRating*100}%</h2>
+        </span>
+    </div>
+`
+}
 
 function renderMovies(movies) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
-        </div>
-    `
+    return movies.map(renderMovie).join('')
 }
 
 function movies() {
