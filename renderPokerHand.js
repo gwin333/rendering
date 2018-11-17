@@ -1,13 +1,17 @@
+function singleCard (pokerHand) {
+    return `
+        <div class="text-center mt-5" style="display: inline";>
+            <img src = 'img/${pokerHand.value}${pokerHand.suit}.png' style = 'width: 155px; height: 210px;'>
+        </div>
+    `
+}
 
 function renderPokerHand(pokerHand) {
     // HINT: You can use <img /> tags that point to these playing card images: 
     // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(pokerHand)}</code>
-        </div>
-    `
+    return pokerHand.map(singleCard).join('')
 }
+/* <code>${JSON.stringify(pokerHand)}</code> */
 
 function pokerHand() {
     var content = document.getElementById('content');

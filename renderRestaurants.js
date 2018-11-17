@@ -1,12 +1,15 @@
-
-function renderRestaurants(restaurants) {
-    // HINT: You can use <img /> tags that point to these playing card images: 
-    // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
+function renderRestaurant(restaurants) {
     return `
         <div class="text-center mt-5">
             <code>${JSON.stringify(restaurants)}</code>
         </div>
     `
+}
+
+function renderRestaurants(restaurants) {
+    // HINT: You can use <img /> tags that point to these playing card images: 
+    // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
+    return restaurants.map(renderRestaurant).join('')
 }
 
 function restaurants() {
